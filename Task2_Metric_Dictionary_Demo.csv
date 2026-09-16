@@ -1,0 +1,9 @@
+metric,definition,source,refresh,decision_use
+Visits,count(distinct session_id),session_events,Daily,Launch traffic / funnel denominator
+Application Starts,count(distinct application_id where start_event=1),application_events,Daily,Measures intent after visit
+Document Upload Success Rate,successful_uploads / upload_attempts,document_events,Hourly,Detects upload reliability issues
+Submission Conversion,submissions / visits,application_events + session_events,Daily,Primary funnel outcome
+Revenue,sum(successful_payment_amount),payment_events,Daily,Business outcome
+Freshness,max(event_timestamp) compared with current time,event_events,Hourly,Alerts when pipeline is stale
+Null Rate,null_rows / total_rows,metric_source,Hourly,Detects missing critical values
+Uniqueness Rate,unique_key_rows / total_rows,metric_source,Daily,Detects duplicate records

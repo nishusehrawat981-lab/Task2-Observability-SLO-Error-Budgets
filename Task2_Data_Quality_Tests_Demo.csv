@@ -1,0 +1,6 @@
+test,field,threshold,observed,status,action
+freshness,event_timestamp,15 minutes,8 minutes,PASS,No alert
+volume,daily_event_count,>= 10000,12540,PASS,No alert
+null_rate,application_id,<= 1%,0.32%,PASS,No alert
+uniqueness,event_id,>= 99.5%,99.92%,PASS,No alert
+null_rate,revenue,<= 1%,0.18%,PASS,No alert
